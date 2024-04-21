@@ -1,0 +1,54 @@
+﻿@model Clinic_MVC.Models.Doctor
+
+@{
+    ViewBag.Title = "Details";
+}
+<link rel="stylesheet" href="~/CSS/delete.css">
+<center><h2>Details</h2></center>
+
+<div>
+    
+    <hr />
+    <table class="dl-horizontal">
+        <tr>
+            <td><b>@Html.DisplayNameFor(model => model.Department) </b ></td>
+            <td>@Html.DisplayFor(model => model.Department)</td>
+        </tr>
+
+        <tr>
+            <td><b>@Html.DisplayNameFor(model => model.Name) </b ></td>
+            <td>@Html.DisplayFor(model => model.Name)</td>
+        </tr>
+
+
+        <tr>
+            <td><b>@Html.DisplayNameFor(model => model.Degrees) </b ></td>
+            <td>@Html.DisplayFor(model => model.Degrees)</td>
+        </tr>
+
+
+        <tr>
+            <td><b>@Html.DisplayNameFor(model => model.Contact) </b ></td>
+            <td>@Html.DisplayFor(model => model.Contact)</td>
+        </tr>
+
+
+        <tr>
+            <td><b>@Html.DisplayNameFor(model => model.Day)</b ></td>
+            <td>@Html.DisplayFor(model => model.Day)</td>
+        </tr>
+
+
+        <tr>
+            <td><b>@Html.DisplayNameFor(model => model.Time) </b ></td>
+            <td>@Html.DisplayFor(model => model.Time)</td>
+        </tr>
+
+
+    </table>
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DocId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,39 @@
+﻿body {
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg,rgb(207, 138, 243), rgb(250, 253, 251) 86% );
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.dl-horizontal {
+    height: 400px;
+    width: 400px;
+    position: relative;
+    margin: 6% auto;
+    background: rgb(208, 199, 209);
+    border: 1px solid black;
+    box-shadow: inset -7px -7px rgba(3, 99, 72, 0.4);
+    border-radius: 25px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.form-group {
+    width: 100%;
+    padding: 2px 0;
+    margin: 0px 2px 20px;
+    outline: none;
+    background: transparent;
+}
+.btn {
+    width: 10%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 10px 5px 20px;
+    background: rgb(250, 101, 68);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px 5px #1f4b471f;
+}

@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @*<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - My ASP.NET Application</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+
+    <link rel="stylesheet" href="~/CSS/index.css">
+</head>
+<header class="header">
+    <div class="whole">
+        <div class="logo">
+            <img src="~/Images/logo2.jpg" />
+        </div>
+        <div><h1>HAPPY LIFE HEALTH CARE CENTER</h1></div>
+        <div class="mid">
+            <nav class="nav_bar">
+                <ul>
+                    <li><a href="#" class="active">HOME</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#foot">CONTACT</a></li>
+                    <li><a href="#serve">OUR SERVICES</a></li>
+                    <a href="~/Home/SignUp"> Register Now</a>
+                    <a href="~/Home/Login"> Sign In</a>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<body>
+    @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+            <div class="container">
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>*@
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <hr />
+    <footer class="foot" id="foot">
+        @*<p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>*@
+        <div class="container-page">
+            <div class="row">
+                <!-- <div class="col-lg-1"></div> -->
+                <div class="column">
+                    <div class="col1">
+                        <ul class="follow">
+                            <h4> Informations</h4>
+                            <li>
+                                <a href="/page/inst_info/" class="link">Center Information</a>
+                            </li>
+                            <li>
+                                <a href="/page/campus/" class="link"> Facilities</a>
+                            </li>
+                            <li>
+                                <a href="/staffs/" class="link">Staffs</a>
+
+                            </li>
+                            <li>
+                                <a href="http://su.kgec.ac.in/" target="_blank" class="link">Career</a>
+                            </li>
+                            <li>
+                                <a href="#" class="link">FAQ</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="col1">
+                        <ul class="follow">
+                            <h4>Others</h4>
+                            <li><a href="#" class="link">Doctors</a></li>
+                            <li><a href="#" class="link">Time Schedule</a></li>
+                            <li><a href="#" class="link"> Enquiry</a></li>
+                            <li><a href="#" class="link">International Patients</a></li>
+                            <li><a href="#" class="link">Site Feedback</a></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="col2">
+
+                        <p class="vcard follow">
+                            <h4>Our address</h4>
+                            <span class="url fn org">HAPPY LIFE HEALTH CARE SENTER</span><br><span class="adr"><span class="locality">Raypur</span>, <span class="region">Kolkata, WB</span> <span class="postal-code">700156</span></span><br> Phone : +91-33-2582-1309<br>
+                            Email : <a href="mailto:contact@happylife.healthcare.in" class="link">contact@happylife.healthcare.in</a>
+                        </p>
+
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59010.219232319265!2d88.1827067787881!3d22.42380472631276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027d54e9e5e359%3A0xb2245884c961a257!2sRaypur%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1655003571617!5m2!1sen!2sin" width="150" height="70" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="col4">
+                        <h4>Follow us</h4>
+                        <ul class="follow">
+                            <li><a href="#" class="link"> facebook</a></li>
+                            <li><a href="#" class="link"><i class="fab fa-twitter"></i> twitter</a></li>
+                            <li><a href="#" class="link"><i class="fab fa-instagram"></i> instagram</a></li>
+                            <li><a href="#" class="link"><i class="fab fa-linkedin-in"></i> Linkedin</a></li>
+                            <li><a href="#" class="link"><i class="fab fa-linkedin-in"></i> You Tube</a></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+                <!-- <div class="col-lg-1"></div> -->
+
+            </div>
+        </div>
+
+       
+
+    </footer>
+    <div class="col3">
+
+        <hr style="border: 1px solid #2f2f2f">
+        <p style="color: #3a3838; background-color: rgb(135, 203, 206);"> HAPPY LIFE HEALTH CARE CENTER<!-- </a> --><br />Since 1973</p>
+        <p style="font-size: 14px ;background-color: rgb(135, 203, 206);">Disclaimer  |  Copyright  |  Privacy Policy</p>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+
+
+    <script>
+
+        let slideIndex = 0;
+        function showSlides() {
+            let i;
+            const slides = document.getElementsByClassName("swiper-slide");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+
+            }
+            slides[slideIndex - 1].style.display = 'block';
+            slides[slideIndex - 1].style.opacity = 1;
+            setTimeout(() => {
+                slides[slideIndex - 1].style.opacity = 0;
+            }, 1500);
+            setTimeout(showSlides, 3000);
+        }
+        showSlides();
+    </script>
+    @*<script>
+            window.addEventListener('pageshow', function (event) {
+                if (event.persisted) {
+                    location.reload(true);
+                }
+            });
+        </script>*@
+</body>
+
+</html>

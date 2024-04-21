@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Clinic_MVC.Models.Doctor>
+
+@{
+    ViewBag.Title = "Index";
+}
+<link rel="stylesheet" href="~/CSS/doctor.css" />
+
+
+<div class="nav">
+    <div class="left logo">
+        <img src="~/Images/logo2.jpg" />
+    </div>
+    <div class="middle">
+        <h2>Happy Life Health Care Center </h2>
+    </div>
+    <div>
+        
+        <p style="color:#fff; margin-top:10px">@Html.ActionLink("Logout", "Logout", "Home", new { area = "" }, new { @class = "nav-link" })</p>
+    </div>
+</div>
+
+<a href="@Url.Action("Admin", "Appointments")" class="btn btn-primary">Back</a>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-hover" id="myTables">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Department)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Degrees)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Day)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Degrees)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contact)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Day)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.DocId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.DocId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.DocId })
+            </td>
+        </tr>
+    }
+
+</table>

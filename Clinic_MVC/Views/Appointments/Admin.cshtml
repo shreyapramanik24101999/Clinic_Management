@@ -1,0 +1,48 @@
+﻿@model Clinic_MVC.Models.Appointment
+
+@{
+    ViewBag.Title = "Admin";
+}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link rel="stylesheet" href="~/CSS/admin.css" />
+
+
+<body>
+    <div class="nav">
+        <div class="left logo">
+            <img src="~/Images/logo2.jpg" />
+        </div>
+        <div class="middle">
+            <h2>Happy Life Health Care Center </h2>
+        </div>
+        <div>
+            <p style="color:yellow; margin-top:10px">@Html.ActionLink("Logout", "Logout", "Appointments", new { area = "" }, new { @class = "nav-link" })</p>
+        </div>
+
+    </div>
+    <center><h2>Welcome To Admin Page</h2></center>
+    <div class="menu">
+        <div class="card" style="width: 18rem; height: 18rem;">
+            <img class="card-img-top" src="~/Images/login_bg.jpg" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text"> Doctors Management </p>
+
+
+                <a href="@Url.Action("Index", "Doctors")" class="btn btn-primary">View</a>
+
+            </div>
+        </div>
+        <div class="card" style="width: 18rem; height: 18rem;">
+            <img class="card-img-top" src="~/Images/calender.jpg" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text"> Appointments Management </p>
+
+                <a href="@Url.Action("Index", "Appointments")" class="btn btn-primary">View</a>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+

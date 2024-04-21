@@ -1,0 +1,55 @@
+﻿@model Clinic_MVC.Models.Appointment
+
+@{
+    ViewBag.Title = "Login";
+}
+<link rel="stylesheet" href="~/CSS/login.css">
+<div class="nav">
+    <div class="left logo">
+        <img src="~/Images/logo2.jpg" />
+    </div>
+    <div class="middle">
+        <h2>Happy Life Health Care Center </h2>
+    </div>
+    <div></div>
+</div>
+<div>
+    @*@Html.ActionLink("Back to List", "Index")*@
+    <a href="~/Home/Index" class="btn btn-primary">Back to Home</a>
+</div>
+@using (Html.BeginForm("Login", "Appointments", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+<div class="form-horizontal">
+    <center>
+        <h3>Admin Login</h3>
+        <div class="form-group">
+            <label>UserName</label>
+            <div class="col-md-10">
+                @Html.TextBox("username", null, new { @class = "form-control", autocomplete = "off" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <div class="col-md-10">
+                @Html.Password("password", null, new { @class = "form-control", autocomplete = "off" })
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success">Login</button>
+    </center>
+</div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <label>@ViewBag.Notification</label>
+        </div>
+    </div>
+    
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

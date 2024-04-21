@@ -1,0 +1,113 @@
+﻿@model IEnumerable<Clinic_MVC.Models.Appointment>
+
+@{
+    ViewBag.Title = "Index";
+}
+<link rel="stylesheet" href="~/CSS/doctor.css" />
+
+
+<div class="nav">
+    <div class="left logo">
+        <img src="~/Images/logo2.jpg" />
+    </div>
+    <div class="middle">
+        <h2>Happy Life Health Care Center </h2>
+    </div>
+    <div>
+        <p style="color:#fff; margin-top:10px">@Html.ActionLink("Logout", "Logout", "Appointments", new { area = "" }, new { @class = "nav-link" })</p>
+    </div>
+</div>
+<a href="@Url.Action("Admin", "Appointments")" class="btn btn-primary">Back</a>
+
+<div class="menu">
+    @Html.ActionLink("Create New", "Create", null, new { area = "", defAction = "Index", defController = "Appointments" }, new { @class = "nav-link" })
+    <div><h2>Appointments List</h2></div>
+    <div><input type="search" data-table="table table-hover" id="myInput" onkeyup="myFunction()" placeholder="Search.."></div>
+</div>
+<table class="table table-hover" id="myTable">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.patient_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.patient_age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contact_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.appointment_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.doctor_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.department)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.patient_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.patient_age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.contact_number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.appointment_date.ToString().Split(' ')[0])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.doctor_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.department)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.appointment_id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.appointment_id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.appointment_id })
+            </td>
+        </tr>
+    }
+
+</table>
+<script>
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td1 = tr[i].getElementsByTagName("td")[0];
+            td2 = tr[i].getElementsByTagName("td")[3];
+            if (td1 || td2) {
+                txtValue1 = td1.textContent || td1.innerText;
+                txtValue2 = td2.textContent || td2.innerText;
+                if (txtValue1.toUpperCase().indexOf(filter) > -1 || txtValue2.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Clinic_DBModelStoreContainer" CdmEntityContainer="Clinic_DBEntities">
+    <EntitySetMapping Name="Appointments">
+      <EntityTypeMapping TypeName="Clinic_DBModel.Appointment">
+        <MappingFragment StoreEntitySet="Appointment">
+          <ScalarProperty Name="appointment_id" ColumnName="appointment_id" />
+          <ScalarProperty Name="patient_name" ColumnName="patient_name" />
+          <ScalarProperty Name="patient_age" ColumnName="patient_age" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="contact_number" ColumnName="contact_number" />
+          <ScalarProperty Name="appointment_date" ColumnName="appointment_date" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="doctor_name" ColumnName="doctor_name" />
+          <ScalarProperty Name="department" ColumnName="department" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLUserInfoes">
+      <EntityTypeMapping TypeName="Clinic_DBModel.TBLUserInfo">
+        <MappingFragment StoreEntitySet="TBLUserInfo">
+          <ScalarProperty Name="IdUs" ColumnName="IdUs" />
+          <ScalarProperty Name="UsernameUs" ColumnName="UsernameUs" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doctors">
+      <EntityTypeMapping TypeName="Clinic_DBModel.Doctor">
+        <MappingFragment StoreEntitySet="Doctors">
+          <ScalarProperty Name="DocId" ColumnName="DocId" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Degrees" ColumnName="Degrees" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

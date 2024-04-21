@@ -1,0 +1,61 @@
+﻿@model Clinic_MVC.Models.Doctor
+
+@{
+    ViewBag.Title = "Delete";
+}
+<link rel="stylesheet" href="~/CSS/delete.css">
+<div>
+    @Html.ActionLink("Back to List", "Index")
+    <center><h3>Are you sure you want to delete this?</h3></center>
+</div>
+<div>
+  
+    <hr />
+    <table class="dl-horizontal">
+        <tr>
+            <td><b>@Html.DisplayNameFor(model => model.Department) </b ></td>
+            <td>@Html.DisplayFor(model => model.Department)</td>
+        </tr>
+
+        <tr>
+            <td><b>@Html.DisplayNameFor(model => model.Name) </b ></td>
+            <td>@Html.DisplayFor(model => model.Name)</td>
+        </tr>
+
+
+        <tr>
+            <td><b>@Html.DisplayNameFor(model => model.Degrees) </b ></td>
+            <td>@Html.DisplayFor(model => model.Degrees)</td>
+        </tr>
+
+
+        <tr>
+            <td><b>@Html.DisplayNameFor(model => model.Contact) </b ></td>
+            <td>@Html.DisplayFor(model => model.Contact)</td>
+        </tr>
+
+
+        <tr>
+            <td><b>@Html.DisplayNameFor(model => model.Day )</b ></td>
+            <td>@Html.DisplayFor(model => model.Day)</td>
+        </tr>
+
+
+        <tr>
+            <td><b>@Html.DisplayNameFor(model => model.Time) </b ></td>
+            <td>@Html.DisplayFor(model => model.Time)</td>
+        </tr>
+
+
+    </table>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <center><input type="submit" value="Delete" class="btn btn-default" /> </center>
+
+        </div>
+    }
+</div>

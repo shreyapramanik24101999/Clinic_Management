@@ -1,0 +1,74 @@
+﻿body {
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgb(43, 228, 231) 0%, rgb(250, 253, 251) 86%);
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.logo {
+    display: inline-block;
+    align-self: flex-end;
+    text-align: center;
+    font-size: large;
+    font-weight: 500px;
+}
+.logo img {
+        width: 50px;
+        height: 55px;
+        border-radius: 50%;
+ }
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+    background-color: rgb(127, 211, 162);
+    padding: 5px 15px;
+    border: 2px darkolivegreen;
+    color: rgb(8, 8, 8);
+}
+.form-horizontal {
+    height: 350px;
+    width: 300px;
+    position: relative;
+    margin: 6% auto;
+    background: #9cface;
+    border: 1px solid black;
+    box-shadow: inset -7px -7px rgba(3, 99, 72, 0.4);
+    border-radius: 25px;
+    padding: 5px;
+    overflow: hidden;
+}
+.form-group {
+    width: 100%;
+    padding: 2px 0;
+    margin: 0px 2px 20px;
+    
+    outline: none;
+    background: transparent;
+}
+.links{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+.btn-success {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 10px 5px 20px;
+    background: linear-gradient(to right, #757070, #fefeff);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px 5px #1f4b471f;
+}

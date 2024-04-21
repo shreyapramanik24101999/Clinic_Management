@@ -1,0 +1,64 @@
+﻿body {
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg,rgb(92 151 200), rgb(250, 253, 251) 86% );
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.logo {
+    display: inline-block;
+    align-self: flex-end;
+    text-align: center;
+    font-size: large;
+    font-weight: 500px;
+}
+
+.logo img {
+        width: 50px;
+        height: 55px;
+        border-radius: 50%;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+    background-color: rgb(127, 211, 162);
+    padding: 5px 15px;
+    border: 2px darkolivegreen;
+    color: rgb(8, 8, 8);
+}
+.form-horizontal {
+    height: fit-content;
+    width: 350px;
+    position: relative;
+    margin: 6% auto;
+    background: #a1cce8;
+    border: 1px solid black;
+    box-shadow: inset -7px -7px rgba(3, 99, 72, 0.4);
+    border-radius: 25px;
+    padding: 5px;
+    overflow: hidden;
+}
+.form-group {
+    width: 100%;
+    padding: 2px 0;
+    margin: 0px 2px 20px;
+    outline: none;
+    background: transparent;
+}
+.btn-success {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 10px 5px 20px;
+    background: rgb(3, 174, 164);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px 5px #1f4b471f;
+}
